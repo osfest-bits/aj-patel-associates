@@ -18,17 +18,20 @@ window.jQuery(document).ready(function($){
     // End Script for Header Background - Height 100% //
 
 
-    // jQuery smooth scrolling //
-    $('a[href*="#"]').on('click',function(e) {
-        e.preventDefault();
-        var target = this.hash;
-        var $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    });
+    // // jQuery smooth scrolling //
+    // $('a[href*="#"]').on('click',function(e) {
+    //     e.preventDefault();
+    //     let target = this.hash;
+    //     target = target.substring(1);
+    //     console.log(target);
+    //     var $target = $(target);
+    //     console.log($target);
+    //     $('html, body').stop().animate({
+    //         'scrollTop': $target.offset().top
+    //     }, 900, 'swing', function () {
+    //         window.location.hash = target;
+    //     });
+    // });
     // End jQuery smooth scrolling //
 
     jQuery(document).ready(function($) {
@@ -76,15 +79,15 @@ window.jQuery(document).ready(function($){
     // End navigation menu scrollspy to anchor section //
 
 
-    // sticky-menu on scroll
-    $(window).on('scroll', function () {
-        var scroll = $(window).scrollTop();
-        if (scroll < 245) {
-            $("#header").removeClass("sticky-menu");
-        } else {
-            $("#header").addClass("sticky-menu");
-        }
-    });
+    // // sticky-menu on scroll
+    // $(window).on('scroll', function () {
+    //     var scroll = $(window).scrollTop();
+    //     if (scroll < 245) {
+    //         $("#header").removeClass("sticky-menu");
+    //     } else {
+    //         $("#header").addClass("sticky-menu");
+    //     }
+    // });
     // End sticky-menu on scroll
 
 
@@ -293,17 +296,17 @@ window.jQuery(document).ready(function($){
                 }
             }
         });
-        if(!hasError) {
-            var formData = $(this).serialize();
-            $.post('contact-process.php', formData, function(data) {
-                form.find('.required-field').val('');
-                form.append('<div class="success-msg">Thank you! We will contact you shortly.</div>');
-            }).fail(function() {
-                //form.find('.required-field').val('');
-                form.append('<div class="error-msg">Error occurred. Please try again later.</div>');
-            });
-        }
-        return false;
+        // if(!hasError) {
+        //     var formData = $(this).serialize();
+        //     $.post('https://formspree.io/myynyzpw', formData, function(data) {
+        //         form.find('.required-field').val('');
+        //         form.append('<div class="success-msg">Thank you! We will contact you shortly.</div>');
+        //     }).fail(function() {
+        //         form.find('.required-field').val('');
+        //         form.append('<div class="error-msg">Error occurred. Please try again later.</div>');
+        //     });
+        // }
+        // return false;
     });
     // End contact form submit process //
 
